@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignments
 {
-    class Program
+    class Assignment1
     {
         static void CheckEqualNum()
         {
