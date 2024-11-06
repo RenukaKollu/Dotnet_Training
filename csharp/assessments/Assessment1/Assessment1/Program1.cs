@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assessment1
 {
-    class Program
+    class Program1
     {
         public static string RemoveCharAt(string str, int index)
         {
@@ -57,6 +57,7 @@ namespace Assessment1
         }
         static void Main(string[] args)
         {
+            
             Console.WriteLine(RemoveCharAt("python", 1));
             Console.WriteLine(RemoveCharAt("python", 0));
             Console.WriteLine(RemoveCharAt("python", 3));
