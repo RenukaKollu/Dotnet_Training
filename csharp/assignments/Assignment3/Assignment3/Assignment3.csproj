@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{01BC099D-1A0C-4E7B-BB67-C295660DBFA1}</ProjectGuid>
+    <ProjectGuid>{7A6B5B08-37F6-4E73-B81A-99C9D1F8CD39}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Assignments</RootNamespace>
-    <AssemblyName>Assignments</AssemblyName>
+    <RootNamespace>Assignment3</RootNamespace>
+    <AssemblyName>Assignment3</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Assignments.Assignment2</StartupObject>
+    <StartupObject>Assignment3.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,9 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assignment2.cs" />
-    <Compile Include="Assignment1.cs" />
+    <Compile Include="Inheritance.cs" />
+    <Compile Include="StringProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
