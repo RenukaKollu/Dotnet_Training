@@ -1,7 +1,0 @@
-C:\renuka\dotnet_training\csharp\assignments\Assignments\Assignments\bin\Debug\Assignments.exe.config
-C:\renuka\dotnet_training\csharp\assignments\Assignments\Assignments\bin\Debug\Assignments.exe
-C:\renuka\dotnet_training\csharp\assignments\Assignments\Assignments\bin\Debug\Assignments.pdb
-C:\renuka\dotnet_training\csharp\assignments\Assignments\Assignments\obj\Debug\Assignments.csproj.CoreCompileInputs.cache
-C:\renuka\dotnet_training\csharp\assignments\Assignments\Assignments\obj\Debug\Assignments.exe
-C:\renuka\dotnet_training\csharp\assignments\Assignments\Assignments\obj\Debug\Assignments.pdb
-C:\renuka\dotnet_training\csharp\assignments\Assignments\Assignments\obj\Debug\Assignments.csproj.AssemblyReference.cache
