@@ -1,0 +1,7 @@
+C:\renuka\dotnet_training\csharp\assignments\Assignment1\Assignment1\bin\Debug\Assignment1.exe.config
+C:\renuka\dotnet_training\csharp\assignments\Assignment1\Assignment1\bin\Debug\Assignment1.exe
+C:\renuka\dotnet_training\csharp\assignments\Assignment1\Assignment1\bin\Debug\Assignment1.pdb
+C:\renuka\dotnet_training\csharp\assignments\Assignment1\Assignment1\obj\Debug\Assignment1.csproj.AssemblyReference.cache
+C:\renuka\dotnet_training\csharp\assignments\Assignment1\Assignment1\obj\Debug\Assignment1.csproj.CoreCompileInputs.cache
+C:\renuka\dotnet_training\csharp\assignments\Assignment1\Assignment1\obj\Debug\Assignment1.exe
+C:\renuka\dotnet_training\csharp\assignments\Assignment1\Assignment1\obj\Debug\Assignment1.pdb

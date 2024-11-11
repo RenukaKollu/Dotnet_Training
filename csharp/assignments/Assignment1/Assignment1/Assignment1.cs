@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assignments
+namespace Assignment1
 {
     class Assignment1
     {
@@ -29,11 +29,11 @@ namespace Assignments
         {
             Console.Write("Enter a number:");
             int num = int.Parse(Console.ReadLine());
-            if(num < 0)
+            if (num < 0)
             {
                 Console.WriteLine($"{num} is a negative number");
             }
-            else if(num > 0)
+            else if (num > 0)
             {
                 Console.WriteLine($"{num} is a positive number");
             }
@@ -50,23 +50,23 @@ namespace Assignments
             int b = int.Parse(Console.ReadLine());
             Console.Write("enter operator(+,-,*,/):");
             char operation = char.Parse(Console.ReadLine());
-            int result=0;
-            if(operation=='+')
+            int result = 0;
+            if (operation == '+')
             {
                 result = a + b;
             }
-            else if(operation=='-')
+            else if (operation == '-')
             {
                 result = a - b;
             }
             else if (operation == '*')
             {
-                result = a*b;
+                result = a * b;
             }
             else if (operation == '/')
             {
-                
-                result = a/b;
+
+                result = a / b;
             }
             else
             {
@@ -80,7 +80,7 @@ namespace Assignments
         {
             Console.Write("Enter a number: ");
             int num = int.Parse(Console.ReadLine());
-            for(int i=0;i<=10;i++)
+            for (int i = 0; i <= 10; i++)
             {
                 Console.WriteLine($"{num}*{i}={num * i}");
             }
@@ -93,9 +93,9 @@ namespace Assignments
             Console.Write("Enter num2: ");
             int num2 = int.Parse(Console.ReadLine());
             int sum = num1 + num2;
-            if(num1==num2)
+            if (num1 == num2)
             {
-                Console.WriteLine($"{sum*3}");
+                Console.WriteLine($"{sum * 3}");
             }
 
 
