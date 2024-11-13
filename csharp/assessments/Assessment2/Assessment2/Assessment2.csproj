@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{788B7F4E-2409-4A20-8B2B-09DE4DC1D48F}</ProjectGuid>
+    <ProjectGuid>{01ECDDBC-9EEC-4A09-A695-BD6506C5D6C6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Assignment2</RootNamespace>
-    <AssemblyName>Assignment2</AssemblyName>
+    <RootNamespace>Assessment2</RootNamespace>
+    <AssemblyName>Assessment2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Assessment2.ExceptionClass</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,8 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assignment2.cs" />
+    <Compile Include="AbstractClass.cs" />
+    <Compile Include="ExceptionClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SortingClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,0 +1,7 @@
+C:\renuka\dotnet_training\csharp\assessments\Assessment2\Assessment2\bin\Debug\Assessment2.exe.config
+C:\renuka\dotnet_training\csharp\assessments\Assessment2\Assessment2\bin\Debug\Assessment2.exe
+C:\renuka\dotnet_training\csharp\assessments\Assessment2\Assessment2\bin\Debug\Assessment2.pdb
+C:\renuka\dotnet_training\csharp\assessments\Assessment2\Assessment2\obj\Debug\Assessment2.csproj.AssemblyReference.cache
+C:\renuka\dotnet_training\csharp\assessments\Assessment2\Assessment2\obj\Debug\Assessment2.csproj.CoreCompileInputs.cache
+C:\renuka\dotnet_training\csharp\assessments\Assessment2\Assessment2\obj\Debug\Assessment2.exe
+C:\renuka\dotnet_training\csharp\assessments\Assessment2\Assessment2\obj\Debug\Assessment2.pdb
