@@ -1,0 +1,135 @@
+--Write a query to fetch the details of the books written by author whose name ends with er.
+create table Books(
+id int primary key,
+title varchar(30) not null,
+author varchar(15) not null,
+isbn bigint unique,
+published_date date)
+ 
+insert into Books values (1,'My First Sql book','Mary Parker',981483029127,'2012-02-22 12:08:17'),
+(2,'My Second sql Book','John mayer',857300923713,'1972-07-03 09:22:45'),
+(3,'My Third Sql Book','Cary Flint',523120967812,'2015-10-18 14:05:44');
+ 
+select * from books
+select * from books where author like  '%er'
+
+--creating reviews table
+create table reviews(
+id int primary key,
+book_id int references books(id),
+reviewer_name varchar(20),
+content varchar(25),
+rating int,
+published_date date)
+ 
+insert into reviews values (1,1,'John Smith','My first review',4,'2017-12-10 05:50:11'),(2,2,'John Smith','My second review',5,'2017-10-13 15:05:12'),
+(3,3,'Alice Walker','Another review',1,'2017-10-22 23:47:10')
+update reviews 
+set book_id =2
+where id=3;
+ 
+select * from reviews
+select b1.title,b1.author, r1.reviewer_name from
+books b1
+join reviews r1 on b1.id=r1.book_id;
+
+--selecting reviewer name who reviewed more than one book.
+select reviewer_name from reviews group by reviewer_name having count(reviewer_name)>1
+
+---Display the Name for the customer from above customer table who live in same address which has character o anywhere in address
+create table Customer (
+    id int primary key,
+    name varchar(50),
+    age int,
+    address varchar(100),
+    salary decimal(10, 2)
+)
+ -- insert the given data into the customer table
+insert into Customer (id, name, age, address, salary) values (1, 'ramesh', 32, 'ahmedabad', 2000.00);
+insert into Customer (id, name, age, address, salary) values (2, 'khilan', 25, 'delhi', 1500.00);
+insert into Customer (id, name, age, address, salary) values (3, 'kaushik', 23, 'kota', 2000.00);
+insert into Customer (id, name, age, address, salary) values (4, 'chaitali', 25, 'mumbai', 6500.00);
+insert into Customer (id, name, age, address, salary) values (5, 'hardik', 27, 'bhopal', 8500.00);
+insert into Customer (id, name, age, address, salary) values (6, 'komal', 22, 'mp', 4500.00);
+insert into Customer (id, name, age, address, salary) values (7, 'muffy', 24, 'indore', 10000.00);
+ 
+--query to display the names of customers living at an address containing 'o'
+select name
+from Customer
+where address like '%o%';
+
+
+
+--Question 4 creating customers table
+create table customers ( id int primary key,name varchar(50),age int,address varchar(100),salary decimal(10, 2)
+)
+ --insert values into the customers table
+insert into customers (id, name, age, address, salary) values (1, 'ramesh', 32, 'ahmedabad', 2000.00);
+insert into customers (id, name, age, address, salary) values (2, 'khilan', 25, 'delhi', 1500.00);
+ 
+--creating orders table
+create table orders (
+    oid int primary key,
+    date datetime,
+    customer_id int,
+    amount decimal(10, 2)
+)
+ --insert values into the orders table
+insert into orders (oid, date, customer_id, amount) values (102, '2009-10-08', 100, 1500.00)
+insert into orders (oid, date, customer_id, amount) values (103, '2009-10-08', 101, 1560.00)
+insert into orders (oid, date, customer_id, amount) values (104, '2009-11-20', 103, 2060.00)
+ 
+--query to display the date and total number of customers who placed orders on the same date
+select date, count(distinct customer_id) as total_customers
+from orders
+group by date
+
+--creating employee table
+create table Employee(
+ID int primary key,
+names varchar(20) not null,
+Age int , 
+Address varchar(20) not null,
+Salary bigint
+)
+ 
+insert into Employee values (1,'Ramesh',32,'Ahmedabad',2000),(2,'Khilan',25,'Delhi',1500),(3,'Kaushik',23,'Kota',2000),
+(4,'Chaitali', 25, 'Mumbai',6500),
+(5,'Hardik',27,'Bhopal',8500),
+(6,'Komal',22,'MP',Null),
+(7,'Muffy',24,'Indore',NuLL)
+ 
+ 
+select *from Employee
+ 
+select lower(names) as emp_name from employee where salary is null
+
+
+--question 5 creating student details table
+create table studentdetails (
+    registerno int primary key,
+    name varchar(50),
+    mail_id varchar(100),
+    age int,
+    qualification varchar(50),
+    mobile_no varchar(15),
+    location varchar(100),
+    gender char(1))
+--insert values into the studentdetails table
+insert into studentdetails (registerno, name, mail_id, age, qualification, mobile_no, location, gender)
+values (2, 'sai', 'sai@gmail.com', 22, 'b.e', '9952836777', 'chennai', 'm');
+insert into studentdetails (registerno, name, mail_id, age, qualification, mobile_no, location, gender)
+values (3, 'kumar', 'kumar@gmail.com', 20, 'bsc', '7890125648', 'madurai', 'm');
+insert into studentdetails (registerno, name, mail_id, age, qualification, mobile_no, location, gender)
+values (4, 'selvi', 'selvi@gmail.com', 22, 'b.tech', '904567342', 'selam', 'f');
+insert into studentdetails (registerno, name, mail_id, age, qualification, mobile_no, location, gender)
+values (5, 'nisha', 'nisha@gmail.com', 25, 'm.e', '7834672310', 'theni', 'f');
+insert into studentdetails (registerno, name, mail_id, age, qualification, mobile_no, location, gender)
+values (6, 'saisaran', 'saran@gmail.com', 21, 'b.a', '7890345678', 'madurai', 'f');
+insert into studentdetails (registerno, name, mail_id, age, qualification, mobile_no, location, gender)
+values (7, 'tom', 'tom@gmail.com', 23, 'bca', '8901234675', 'pune', 'm');
+ 
+--query to display the gender and total number of males and females
+select gender, count(*) as total_count
+from studentdetails
+group by gender;
