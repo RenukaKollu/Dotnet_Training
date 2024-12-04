@@ -1,0 +1,78 @@
+--1.Query to display your birthday
+
+select DATENAME(weekday, '2002-08-15')as DayofWeek;
+
+--2. Query to display age in days
+
+select DATEDIFF(day,'2002-08-15',getdate()) as AgeInDays;
+
+
+
+--3 query to display all employees information those who joined before 5 years in the current month
+
+select * from emp
+where datediff(year,hiredate,getdate())>=5
+and month(hiredate)=month(getdate());
+
+--4 Queries for Employees table
+-- Start the transaction
+BEGIN TRANSACTION;
+ -- Create the Employee table
+CREATE TABLE Employees (
+    empno INT PRIMARY KEY,
+    ename VARCHAR(20),
+    sal FLOAT,
+    doj DATE
+);
+ -- Insert 3 rows
+INSERT INTO Employees (empno, ename, sal, doj) VALUES (1, 'John', 1000, '2020-05-01');
+INSERT INTO Employees (empno, ename, sal, doj) VALUES (2, 'Jane', 1500, '2021-06-10');
+INSERT INTO Employees (empno, ename, sal, doj) VALUES (3, 'Jake', 2000, '2022-07-15');
+ 
+-- Update second row's salary with 15% increment
+UPDATE Employees 
+SET sal = sal * 1.15 
+WHERE empno = 2;
+ -- Delete first row
+DELETE FROM Employees WHERE empno = 1;
+ -- Commit the transaction
+COMMIT;
+ -- If you want to undo the deletion, you need to re-insert the deleted row (manually):
+-- Re-insert the deleted row with the updated salary
+INSERT INTO Employees (empno, ename, sal, doj) VALUES (1, 'John', 1000, '2020-05-01');
+SELECT * FROM Employees;
+
+
+
+--5 Query to   Create a user defined function calculate Bonus for all employees
+
+CREATE FUNCTION Cal(@DeptNo INT, @Sal DECIMAL(10, 2))
+RETURNS DECIMAL(10, 2)
+AS
+BEGIN
+    DECLARE @Bonus DECIMAL(10, 2);
+    -- Calculate bonus based on department number
+    IF @DeptNo = 10
+        SET @Bonus = @Sal * 0.15;
+    ELSE IF @DeptNo = 20
+        SET @Bonus = @Sal * 0.20;
+    ELSE
+        SET @Bonus = @Sal * 0.05;
+    RETURN @Bonus;
+END;
+select eName,DeptNo,Sal,[dbo].[Cal](DeptNo, Sal) AS Bonus FROM Emp;
+
+
+
+--6 Query to create a procedure and update sal of emp table
+create or alter proc UpdateSal
+as
+begin
+update e
+set e.sal = e.sal + 500 
+from EMP e
+Join DEPT D ON e.DeptNo = d.Deptno
+where d.Dname = 'Sales' and e.sal < 1500;
+end
+ exec updateSal;
+ select *from emp
