@@ -1,0 +1,101 @@
+--1) Create the CourseDetails table
+CREATE TABLE CourseDetails (
+    C_Id NVARCHAR(10) PRIMARY KEY,
+    C_Name NVARCHAR(50) NOT NULL,
+    StartDate DATE NOT NULL,
+    EndDate DATE NOT NULL,
+    Fee INT NOT NULL
+);
+ 
+-- Insert the given data into the table
+INSERT INTO CourseDetails (C_Id, C_Name, StartDate, EndDate, Fee)
+VALUES
+('DN003', 'Dot Net', '2018-02-01', '2018-02-28', 15000),
+('DV004', 'Data Visualization', '2018-03-01', '2018-04-15', 15000),
+('JA002', 'Advanced Java', '2018-01-02', '2018-01-20', 10000),
+('JC001', 'CoreJava', '2018-01-02', '2018-01-12', 3000);
+
+--
+CREATE FUNCTION CalculateCourseDuration(@StartDate DATE, @EndDate DATE)
+RETURNS INT
+AS
+BEGIN
+    RETURN DATEDIFF(DAY, @StartDate, @EndDate);
+END;
+
+-- Example to calculate the course duration
+SELECT dbo.CalculateCourseDuration('2018-02-01', '2018-02-28') AS Duration;
+
+-- Create the T_CourseInfo table
+CREATE TABLE T_CourseInfo (
+    CourseName NVARCHAR(50),
+    StartDate DATE
+);
+
+--2) creating trigger
+
+CREATE TRIGGER trg_InsertCourseDetails
+ON CourseDetails
+AFTER INSERT
+AS
+BEGIN
+    -- Insert the new course details into T_CourseInfo
+    INSERT INTO T_CourseInfo (CourseName, StartDate)
+    SELECT C_Name, StartDate
+    FROM inserted;
+END;
+
+-- Insert a new course
+INSERT INTO CourseDetails (C_Id, C_Name, StartDate, EndDate, Fee)
+VALUES ('PY005', 'Python Programming', '2024-01-01', '2024-01-31', 20000);
+ 
+-- Verify the T_CourseInfo table
+SELECT * FROM T_CourseInfo;
+SELECT * FROM CourseDetails;
+
+-----3)
+
+--creating product details table
+CREATE TABLE ProductsDetails (
+    ProductId INT IDENTITY(1,1) PRIMARY KEY, 
+    ProductName VARCHAR(50) NOT NULL,
+    Price DECIMAL(10, 2) NOT NULL,
+    DiscountedPrice AS (Price * 0.90) PERSISTED 
+);
+
+--creating procedure
+
+CREATE PROCEDURE InsertProductDetails
+    @ProductName VARCHAR(50),
+    @Price DECIMAL(10, 2),
+    @GeneratedProductId INT OUTPUT,
+    @DiscountedPrice DECIMAL(10, 2) OUTPUT
+AS
+BEGIN
+    -- Insert the new product
+    INSERT INTO ProductsDetails (ProductName, Price)
+    VALUES (@ProductName, @Price);
+ 
+    -- Get the generated ProductId
+    SET @GeneratedProductId = SCOPE_IDENTITY();
+ 
+    -- Get the DiscountedPrice for the inserted record
+    SELECT @DiscountedPrice = DiscountedPrice
+    FROM ProductsDetails
+    WHERE ProductId = @GeneratedProductId;
+END;
+
+--
+
+DECLARE @GeneratedProductId INT;
+DECLARE @DiscountedPrice DECIMAL(10, 2);
+ 
+-- Execute the stored procedure
+EXEC InsertProductDetails
+    @ProductName = 'Smartphone',
+    @Price = 50000,
+    @GeneratedProductId = @GeneratedProductId OUTPUT, 
+    @DiscountedPrice = @DiscountedPrice OUTPUT; 
+ 
+-- Display the results
+SELECT @GeneratedProductId AS ProductId, @DiscountedPrice AS DiscountedPrice;
