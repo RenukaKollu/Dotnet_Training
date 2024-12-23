@@ -25,8 +25,8 @@ namespace Assessment1
                     command.CommandType = CommandType.StoredProcedure;
 
                    
-                    command.Parameters.AddWithValue("@ProductName", "Laptop");
-                    command.Parameters.AddWithValue("@Price", 70000);
+                    command.Parameters.AddWithValue("@ProductName", "Shoes");
+                    command.Parameters.AddWithValue("@Price", 20000);
 
                    
                     SqlParameter productIdParam = new SqlParameter("@GeneratedProductId", SqlDbType.Int)

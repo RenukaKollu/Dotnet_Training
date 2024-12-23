@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E5E62D75-3E15-48AB-9B76-C64118313479}</ProjectGuid>
+    <ProjectGuid>{F2918483-D089-4240-BAC2-2EA6D3539317}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>JS_Programs</RootNamespace>
-    <AssemblyName>JS_Programs</AssemblyName>
+    <RootNamespace>Railway_Reservation</RootNamespace>
+    <AssemblyName>Railway_Reservation</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,15 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddTrain.cs" />
+    <Compile Include="BookTicket.cs" />
+    <Compile Include="CancelTicket.cs" />
+    <Compile Include="SearchTrains.cs" />
+    <Compile Include="ViewBookings.cs" />
+    <Compile Include="ViewCancellation.cs" />
+    <Compile Include="ViewUserbookings.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewTrains.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Question1.html" />
-    <Content Include="Question2html.html" />
-    <Content Include="Question3.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
