@@ -115,10 +115,12 @@ namespace Railway_Reservation
             {
                 Console.WriteLine("Admin Menu");
                 Console.WriteLine("1. Add Train");
-                Console.WriteLine("2. View Trains");
-                Console.WriteLine("3. View Bookings");
-                Console.WriteLine("4. View Cancellations");
-                Console.WriteLine("5. Logout");
+                Console.WriteLine("2. Modify Train");
+                Console.WriteLine("3. Delete Train");
+                Console.WriteLine("4. View Trains");
+                Console.WriteLine("5. View Bookings");
+                Console.WriteLine("6. View Cancellations");
+                Console.WriteLine("7. Logout");
                 Console.Write("Enter your choice: ");
                 int choice = int.Parse(Console.ReadLine());
 
@@ -128,16 +130,23 @@ namespace Railway_Reservation
                         AddTrain();
                         break;
                     case 2:
-                        ViewTrains();
+                        ModifyTrain();
                         break;
+                       
                     case 3:
-                        ViewBookings();
+                        DeleteTrain();
                         break;
                     case 4:
+                        ViewTrains();
+                        break;
+                    case 5:
+                        ViewBookings();
+                        break;
+                    case 6:
                         ViewCancellations();
                         break;
                     
-                    case 5:
+                    case 7:
                         return;
                     default:
                         Console.WriteLine("Invalid choice, please try again.");

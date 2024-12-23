@@ -46,6 +46,8 @@
     <Compile Include="AddTrain.cs" />
     <Compile Include="BookTicket.cs" />
     <Compile Include="CancelTicket.cs" />
+    <Compile Include="DeleteTrain.cs" />
+    <Compile Include="ModifyTrain.cs" />
     <Compile Include="SearchTrains.cs" />
     <Compile Include="ViewBookings.cs" />
     <Compile Include="ViewCancellation.cs" />
