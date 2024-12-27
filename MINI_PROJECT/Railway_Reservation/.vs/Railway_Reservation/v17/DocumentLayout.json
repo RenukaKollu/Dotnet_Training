@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\renuka\\dotnet_training\\MINI_PROJECT\\Railway_Reservation\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F2918483-D089-4240-BAC2-2EA6D3539317}|Railway_Reservation\\Railway_Reservation.csproj|c:\\renuka\\dotnet_training\\mini_project\\railway_reservation\\railway_reservation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2918483-D089-4240-BAC2-2EA6D3539317}|Railway_Reservation\\Railway_Reservation.csproj|solutionrelative:railway_reservation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\renuka\\dotnet_training\\MINI_PROJECT\\Railway_Reservation\\Railway_Reservation\\Program.cs",
+              "RelativeDocumentMoniker": "Railway_Reservation\\Program.cs",
+              "ToolTip": "C:\\renuka\\dotnet_training\\MINI_PROJECT\\Railway_Reservation\\Railway_Reservation\\Program.cs",
+              "RelativeToolTip": "Railway_Reservation\\Program.cs",
+              "ViewState": "AgIAALgAAAAAAAAAAAAcwMUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T10:40:45.934Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

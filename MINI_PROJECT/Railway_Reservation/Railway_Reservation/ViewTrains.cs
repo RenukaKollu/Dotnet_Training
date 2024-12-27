@@ -30,7 +30,8 @@ namespace Railway_Reservation
                     Console.WriteLine("TrainNo, TrainName, FromStation, ToStation, Price, ClassofTravel, TrainStatus, SeatsAvailable");
                     while (read.Read())
                     {
-                        Console.WriteLine($"{read["TrainNo"]}, {read["TrainName"]}, {read["FromStation"]}, {read["ToStation"]}, {read["Price"]}, {read["ClassofTravel"]}, {read["TrainStatus"]}, {read["SeatsAvailable"]}");
+                        Console.WriteLine($"{read["TrainNo"]},{read["TrainName"]},   {read["FromStation"]},   {read["ToStation"]},   {read["Price"]},  {read["ClassofTravel"]},  {read["TrainStatus"]}, {read["SeatsAvailable"]}");
+                        Console.WriteLine("-------------------------------------------------------");
                     }
                 }
             }

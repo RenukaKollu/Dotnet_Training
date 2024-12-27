@@ -35,10 +35,10 @@ namespace Railway_Reservation
                     string trainStatus = reader["TrainStatus"].ToString();
                     int seatsAvailable = Convert.ToInt32(reader["SeatsAvailable"]);
 
-                    // Close the reader as we don't need it anymore
+                   
                     reader.Close();
 
-                    // Confirm the deletion with the user
+                   
                     Console.WriteLine($"Train Details to be deleted:");
                     Console.WriteLine($"Train No: {trainNo}");
                     Console.WriteLine($"Train Name: {trainName}");
@@ -64,6 +64,7 @@ namespace Railway_Reservation
                         if (rowsAffected > 0)
                         {
                             Console.WriteLine("Train deleted successfully!");
+                            Console.WriteLine("----------------------------------------");
                         }
                         else
                         {

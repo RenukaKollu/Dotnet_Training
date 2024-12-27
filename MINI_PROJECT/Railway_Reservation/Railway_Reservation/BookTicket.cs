@@ -41,7 +41,7 @@ namespace Railway_Reservation
 
                 if (availableSeats < seatsToBook)
                 {
-                    Console.WriteLine("sorry..!! Not enough seats available to book, you can try in Waiting List.");
+                    Console.WriteLine("sorry..!! Not enough seats available to book.");
                     return;
                 }
 
@@ -60,6 +60,8 @@ namespace Railway_Reservation
                 updateSeats.ExecuteNonQuery();
 
                 Console.WriteLine("Booking successful!");
+                
+                Console.WriteLine("----------------------------------------");
             }
         }
     }

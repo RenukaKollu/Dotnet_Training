@@ -22,11 +22,13 @@ namespace Railway_Reservation
                 while (true)
                 {
                     Console.WriteLine("Hello!! Welcome to  the IRCTC ");
+                    Console.WriteLine("----------********-------------");
                     Console.WriteLine("1. Login");
                     Console.WriteLine("2. Register");
                     Console.WriteLine("3. Exit");
                     Console.Write("Enter your choice: ");
                     int choice = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("----------------------------------------");
 
                     switch (choice)
                     {
@@ -59,6 +61,7 @@ namespace Railway_Reservation
             string username = Console.ReadLine();
             Console.Write("Give Password: ");
             string password = Console.ReadLine();
+            Console.WriteLine("----------------------------------------");
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -86,6 +89,7 @@ namespace Railway_Reservation
                 else
                 {
                     Console.WriteLine("You Entered Invalid username / password.");
+                    Console.WriteLine("----------------------------------------");
                 }
             }
         }
@@ -96,6 +100,7 @@ namespace Railway_Reservation
             string username = Console.ReadLine();
             Console.Write("Give Password: ");
             string password = Console.ReadLine();
+            Console.WriteLine("----------------------------------------");
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -106,6 +111,7 @@ namespace Railway_Reservation
                 cmd.ExecuteNonQuery();
 
                 Console.WriteLine("Your Registration is successful!! And now you can login.");
+                Console.WriteLine("----------------------------------------");
             }
         }
 
@@ -113,6 +119,7 @@ namespace Railway_Reservation
         {
             while (true)
             {
+                Console.WriteLine("----------------------------------------");
                 Console.WriteLine("Admin Menu");
                 Console.WriteLine("1. Add Train");
                 Console.WriteLine("2. Modify Train");
@@ -123,6 +130,7 @@ namespace Railway_Reservation
                 Console.WriteLine("7. Logout");
                 Console.Write("Enter your choice: ");
                 int choice = int.Parse(Console.ReadLine());
+                Console.WriteLine("----------------------------------------");
 
                 switch (choice)
                 {
@@ -160,6 +168,7 @@ namespace Railway_Reservation
 
             while (true)
             {
+                Console.WriteLine("----------------------------------------");
                 Console.WriteLine("User Menu");
                 Console.WriteLine("1. Search Trains");
                 Console.WriteLine("2. View Trains");
@@ -169,6 +178,7 @@ namespace Railway_Reservation
                 Console.WriteLine("6. Logout");
                 Console.Write("Enter your choice: ");
                 int choice = int.Parse(Console.ReadLine());
+                Console.WriteLine("----------------------------------------");
 
                 switch (choice)
                 {

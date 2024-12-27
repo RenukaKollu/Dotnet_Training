@@ -29,13 +29,14 @@ namespace Railway_Reservation
                     if (!read.HasRows)
                     {
                         Console.WriteLine("No trains found.");
+                        Console.WriteLine("----------------------------------------");
                         return;
                     }
 
-                    Console.WriteLine("TrainNo, TrainName, Price, ClassofTravel, SeatsAvailable");
+                    
                     while (read.Read())
                     {
-                        Console.WriteLine($"{read["TrainNo"]}, {read["TrainName"]}, {read["Price"]}, {read["ClassofTravel"]}, {read["SeatsAvailable"]}");
+                        Console.WriteLine($"TrainNo: {read["TrainNo"]}, TrainName: {read["TrainName"]}, Price: {read["Price"]}, ClassofTravel: {read["ClassofTravel"]}, SeatsAvailable:{read["SeatsAvailable"]}");
                     }
                 }
             }

@@ -70,6 +70,7 @@ namespace Railway_Reservation
                 updateBooking.ExecuteNonQuery();
 
                 Console.WriteLine(" your Cancellation is successful !!! And Your payment for the cancelled tickets will be refunded soon.");
+                Console.WriteLine("----------------------------------------");
             }
         }
     }

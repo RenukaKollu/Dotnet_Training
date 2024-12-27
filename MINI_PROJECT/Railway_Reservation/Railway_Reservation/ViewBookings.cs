@@ -24,10 +24,11 @@ namespace Railway_Reservation
                         return;
                     }
 
-                    Console.WriteLine("BookingID, UserID, TrainNo, SeatsBooked, BookingDate");
+                    
                     while (read.Read())
                     {
-                        Console.WriteLine($"{read["BookingID"]}, {read["UserID"]}, {read["TrainNo"]}, {read["SeatsBooked"]}, {read["BookingDate"]}");
+                        Console.WriteLine($"BookingID: {read["BookingID"]} UserID: {read["UserID"]}  TrainNo: {read["TrainNo"]}  SeatsBooked: {read["SeatsBooked"]}  BookingDate:  {read["BookingDate"]}");
+
                     }
                 }
             }

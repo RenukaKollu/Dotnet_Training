@@ -45,6 +45,7 @@ namespace Railway_Reservation
                 add.ExecuteNonQuery();
 
                 Console.WriteLine("Train is added successfully in IRCTC!");
+                Console.WriteLine("----------------------------------------");
             }
         }
     }
