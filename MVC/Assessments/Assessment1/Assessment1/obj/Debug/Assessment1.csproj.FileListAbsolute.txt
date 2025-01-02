@@ -1,0 +1,2 @@
+C:\renuka\dotnet_training\MVC\Assessments\Assessment1\Assessment1\obj\Debug\Assessment1.csproj.AssemblyReference.cache
+C:\renuka\dotnet_training\MVC\Assessments\Assessment1\Assessment1\obj\Debug\Assessment1.csproj.CoreCompileInputs.cache
